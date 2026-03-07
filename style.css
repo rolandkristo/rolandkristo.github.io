@@ -42,6 +42,13 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: nowrap;
+}
+
+.nav-links {
+    display: flex;
+    flex-wrap: nowrap;
+    white-space: nowrap;
 }
 
 .nav-name { color: #fff; font-weight: 700; font-size: 1.05rem; }
@@ -53,6 +60,7 @@ nav {
     font-size: 0.92rem;
 }
 .nav-links a:hover { color: #fff; text-decoration: none; }
+.nav-links a.nav-active { color: #fff; font-weight: 600; }
 
 /* ── Header ── */
 header {
@@ -127,6 +135,8 @@ footer {
 
 /* ── Responsive ── */
 @media (max-width: 600px) {
+    nav { overflow-x: auto; }
+    .nav-inner { min-width: max-content; }
     .nav-links a { margin-left: .8rem; font-size: .82rem; }
     h1 { font-size: 1.5rem; }
     header { padding: 2rem 1rem 1.5rem; }
